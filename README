@@ -1,0 +1,38 @@
+****************************************************************************************************
+*****************************    ConvexHull‬‬ & Operators overloading    *****************************
+****************************************************************************************************
+classes, const, references,‬‬ ‫‪dynamic allocation.
+
+
+Files:
+~~~~~~
+Makefile                       -   Comiles project.
+README                         -   This file.
+ConvexHull.cpp‬‬                 -   Convex Hull algorithm logic.
+PointSetBinaryOperations.cpp‬‬   -   Demonstration of PointSet class operator overloading.
+Point.h‬­                        -   Header file.
+‪Point.cpp‬‬                      -   Class that represents a point with (x,y) coordinates.
+PointSet.h‬­‪                     -   Header file.
+PointSet.cpp                   -   Class that represents a mathematical set of points.
+‬‬
+Implementation Details:
+~~~~~~~~~~~~~~~~~~~~~~~
+Iv'e implemented a basic vector class, that will increase it's array size, but won't decrease it
+and only the methods I needed for this exercise were implemented in the class.
+This vector has two usages:
+It is the base for the PointSet class - most of PointSet class methods are using the Vector methods.
+It also uses as a stack for the Convex Hull algorithm, after implementing the push back and
+pop back methods.
+I chose to use an array based data structure (in contrast to ie. linked list), because of the ease
+of sorting, using the 'std::sort' method.
+As far as I know, most of the students who used data structure other than an array, had to copy all
+of their points to an array in order to sort it (O(n)).
+I reach to O(n) run-time complexity in my data structure every time I need to change it's size.
+Bottom line, we would prefer one data structure over the other, depending on how many points would
+be added during run-time.
+The ConvexHull.cpp‬‬ holds the main function for the Convex Hull algorithm.
+It uses a set of points, received from input, uses MyVector class as a stack for the algorithm and
+prints the algorithm output.
+The PointSetBinaryOperations.cpp‬‬ holds the main function for the PointSet class operator overloading
+demonstration.
+****************************************************************************************************
